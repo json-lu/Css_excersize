@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css样式优先级</title>
+    <!--
+        !important :样式修饰词，提升指定样式规则的应用优先权,加了此修饰，默认执行此修饰所修饰的样式。
+    -->
+    <style>
+        h1{
+            color:rgb(255, 0, 0);
+        }
+        #idCss {
+            color: red;
+        }
+          /*
+        id选择器优先于>标签选择器
+        */
+        h2 #idCss{
+            color: dodgerblue;
+        }
+      
+        .classCss{  
+            color: red;
+        }
+         /*
+        class选择器优先于>标签选择器
+        */
+        h3 .classCss{
+            color: dodgerblue;
+        }
+        /*
+        id选择器优先于>class选择器
+        */
+        .idClass{
+            color: dodgerblue;
+        }
+        
+        /*
+            行内样式优先于>id选择器
+        */
+        #lineId{
+            color: dodgerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>标签选择器</h1>
+    <h2 id="idCss" class="idClass">Id选择器</h2>
+    <h3 class="classCss">Class选择器</h3>
+    <h4 id="lineId" style="color: red;">行内样式</h4>
+    
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>文本</title>
+        <style>
+                    #container{
+                        width: 600px;
+                        display: flex;
+                        border: 1px solid green;
+                    }
+                    div>div:nth-child(1){
+                        width: 200px;
+                        flex-grow: 1;
+                        border: 1px solid red;
+                    }
+                    div>div:nth-child(1)>p{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    div>div:nth-of-type(2){
+                        width: 200px;
+                        flex-grow: 1;
+                        border: 1px solid red;
+                    }
+                    div>div:nth-of-type(2)>p{
+                        width: 100px;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        line-clamp: 2;
+                        display: -webkit-box;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        text-overflow: -o-ellipsis-lastline;
+                    }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div>
+                <p>当前文本当前文本当前文本当前文本当前文本当前文本</p>
+            </div>
+            <div>
+                <p>当前文本当前文本当前文本当前文本当前文本当前文本</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Css选择器的类型</title>
+        <style>
+            /*
+            标签选择器
+        */
+            h1 {
+                color: red;
+            }
+            /*
+            clas选择器
+        */
+            .classCss {
+                color: red;
+            }
+
+            h2 .classCss{
+                color:dodgerblue;
+            }
+
+            /*
+            id选择器
+        */
+            #idCss {
+                color: red;
+            }
+            /**
+              组合选择器
+            */
+            /*
+            后代选择器
+          */
+            div h2 {
+                color: royalblue;
+            }
+            /*
+            子元素选择器
+        */
+            div>h1 {
+                color: salmon;
+            }
+
+            /*
+            相邻兄弟选择器
+        */
+            h4~h5 {
+                margin-left: 10px;
+                color: red !important;/*使用！important修饰，优先此样式显示,不会被相同的后续样式覆盖*/
+            }
+            /*
+            后续兄弟选择器
+        */
+            h4~h5 {
+                margin-left: 10px;
+                color: green;
+            }
+
+            /**
+            伪类选择器
+            */
+            h1:first-child{
+              color:fuchsia;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1>标签选择器</h1>
+        <h2 class="classCss">class选择器</h2>
+        <h3 id="idCss">id选择器</h3>
+        <h4 style="color: red">行内样式</h4>
+        <hr />
+        <h5>相邻兄弟选择器</h5>
+        <h5>后续兄弟选择器</h5>
+        <div>
+            <!--所有的子元素都是后代-->
+            <h1>子元素选择器</h1>
+            <h1>子元素选择器</h1>
+            <div>
+                <h2>后代选择器</h2>
+            </div>
+        </div>
+    </body>
+</html>

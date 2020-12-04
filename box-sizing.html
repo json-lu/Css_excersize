@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>box-sizing</title>
+    <style>
+        div#div1{
+            width: 100px;
+            height: 100px;
+            /*
+            box-sizing:border-box;
+            用户界面看到的实际宽度=设置的宽度
+           100px =  border左边框宽度+padding左边框宽度+内容宽度+padding右边框宽度+border右边框宽度
+            100px = 1px+10px+78px+10px+1px
+            */
+            box-sizing: border-box;
+            border:1px solid gray;
+            padding: 10px;
+            margin-bottom: 10px;
+            overflow: auto;
+        }
+        div#div2{
+            width: 100px;
+            height: 100px;
+            /*
+            内容宽度=设置的宽度
+            box-sizing:content-box;
+            用户界面看到的实际宽度>设置的宽度
+            border左边框宽度+padding左边框宽度+内容宽度+padding右边框宽度+border右边框宽度>100px
+            1px+10px+100px+10px+1px=122px>100px
+            */
+            box-sizing: content-box;
+            border:1px solid gray;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        box-sizing
+        border-box表示的是div元素宽度:border-left+padding-left+内容宽度+padding-right+border-right
+    </div>
+
+    <div id="div2">
+        box-sizing 
+        content-box表示内容宽度就为div所设置的宽度
+    </div>
+</body>
+</html>

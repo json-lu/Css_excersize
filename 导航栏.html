@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏</title>
+    <style>
+        ul li{
+            width: 200px;
+            list-style: none;
+            background-color:silver;
+        }
+        ul li a{
+            text-decoration:none;
+        }
+        /* ul li:hover{
+            background-color: springgreen;
+        } */
+        .active{
+            background-color: springgreen;
+        }
+    </style>
+    <script src="jquery/jquery.js" type="text/javascript"></script>
+    <script>
+        window.onload=function(){
+            $("li").click(function(){
+                    $(this).addClass("active");
+                    $(this).siblings("li").removeClass("active");
+            })
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#">主页</a>
+        </li>
+        <li>
+            <a href="#">产品</a></li>
+        <li>
+            <a href="#">关于</a>
+        </li>
+        <li>
+            <a href="#">联系</a>
+        </li>
+    </ul>
+</body>
+
+</html>
